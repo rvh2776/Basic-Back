@@ -1,0 +1,38 @@
+
+services:
+  basic-back:
+    # build: ./
+    image: rvh2776/basic-back:latest  #* En vez de crear una imagen con (buil: ./) directamente me bajo la imagen de Docker hub.
+    ports:
+      - '3000:3000'
+    env_file:
+      - .env.development
+    depends_on:
+      - postgres-db
+    networks:
+      - red-docker #? Si existe la network para los contenedores la declaro (Si es que quiero que use esta) si no docker crea una automaticamente.
+    restart: always  # Reinicia automaticamente si hay algun problema incluido un reinicio del servidor
+
+  postgres-db:
+    image: postgres
+    volumes:
+      - postgres-db:/var/lib/postgresql/data
+    ports:
+      - '5432:5432'
+    env_file:
+      - .env.development
+    networks:
+      - red-docker #? Le digo a la red que se debe conectar postgres-db.
+    restart: always  # Reinicia automaticamente si hay algun problema incluido un reinicio del servidor
+
+volumes:
+  postgres-db:
+    external: true  #* Activo (external: true) para decirle a docker-compose que no cree un volume nuevo, que use el que ya existe (Ojo debe existir el volume) de lo contrario tira error.
+
+networks:
+  red-docker:
+    external: true #? Le digo a docker que use la red ya existente.
+
+
+#? Para levantar el proyecto completo en contenedores: la app + postgresDb ejecutamos: docker-compose up
+#* Para verificar siempre si es la ultima imagen docker la que se va a usar: docker compose --pull y despues: docker compose up

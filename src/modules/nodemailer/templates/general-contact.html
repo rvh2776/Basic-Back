@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interés en Propiedad</title>
+  <style>
+    /* General styles for emails */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+    .email-container {
+      max-width: 600px;
+      margin: 20px auto;
+      background-color: #ffffff;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    .header {
+      background-color: #22c55e;
+      padding: 10px;
+      text-align: center;
+      color: white;
+    }
+    .header h1 {
+      margin: 0;
+      font-size: 30px;
+    }
+    .content {
+      padding: 20px; 
+      background: linear-gradient(to bottom, #bbf7d0, #f0fdf4, #bbf7d0);
+    }
+    .content h2 {
+      color: #15803d;
+      font-size: 25px;
+      margin-bottom: 10px;
+    }
+    .content p {
+      line-height: 1.6;
+      margin-bottom: 5px;
+    }
+    .property-details {
+      background-color: #f0fdf4;
+      padding: 15px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+    }
+    .property-details p {
+      margin: 5px 0;
+    }
+    .button {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #22c55e;
+      color: white;
+      text-decoration: none;
+      border-radius: 12px;
+      padding-top: 3px;
+      padding-bottom: 3px;
+      padding-right: 7px;
+      padding-left: 7px;
+      font-weight: bold;
+      text-align: center;
+    }
+    .button:hover {
+      background-color: #15803d;
+    }
+    .footer {
+      text-align: center;
+      padding: 5px;
+      background-color: #22c55e;
+      font-size: 12px;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <div class="email-container">
+    <!-- Header -->
+    <div class="header">
+      <h1 class="font-semibold">Pilar Bienes Raices</h1>
+    </div>
+
+    <!-- Content -->
+    <div class="content">
+    
+      <h2>Hola {{name}}!</h2>
+
+      <hr style="border-top-width: 1px; border-color: #22c55e; margin: 1rem auto;">
+
+      <br>
+      <h3 style="font-weight: 600;">Gracias por contactarnos.</h3>
+      
+      <h4 style="margin-bottom: 0.5rem;">Hemos recibido tu mensaje:</h4>
+
+      <p style="
+        margin-left: 0.25rem;
+        padding: 0.5rem;
+        background-color: #f0fdf4;
+        border-left: 4px solid #22c55e;
+        font-style: italic;
+      ">
+        {{mensaje}}
+      </p>
+
+      <h4 style="margin-top: 1rem;">Uno de nuestros agentes se pondrá en contacto contigo lo antes posible.</h4>
+      <br>
+
+      <hr style="border-top-width: 1px; border-color: #22c55e; margin: 1rem auto;">
+
+      <h4 style="text-align: center;">No te olvides de visitarnos, todos los dias agregamos propiedades nuevas</h4>
+      <h4 style="text-align: center; margin-top: 0.25rem; margin-right: 0.25rem; font-weight: 600;">
+        Visitanos en: <a href="http://www.pilarbienesraices.com.ar" target="_blank" style="text-decoration: none; color: inherit;">Pilar Bienes Raices</a>
+      </h4>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+      <p>Este es un correo generado automáticamente.</p>
+      <p>© 2025 Pilar Bienes Raices.</p>
+    </div>
+  </div>
+</body>
+</html>

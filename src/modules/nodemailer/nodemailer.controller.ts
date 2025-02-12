@@ -1,0 +1,10 @@
+import { Controller } from '@nestjs/common';
+import { NodemailerService } from './nodemailer.service';
+import { ApiExcludeController, ApiTags } from '@nestjs/swagger';
+
+@ApiExcludeController()
+@ApiTags('NodeMailer mas Gamil')
+@Controller('nodemailer')
+export class NodemailerController {
+  constructor(private readonly nodemailerService: NodemailerService) {}
+}
