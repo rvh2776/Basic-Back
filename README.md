@@ -9,7 +9,7 @@
 <hr>
 <br>
 
-# Back-end: Back inicial para proyectos, preparado para usar en conjunto con Basic-Front
+## Back-end: Back inicial para proyectos, preparado para usar en conjunto con Basic-Front
 ## Descripción:
 ### BackEnd listo para iniciar proyectos, cuenta con la autenticación y CRUD completo para usuarios, JWT, PostgresSQL, Cloudinary, etc...
 
@@ -21,13 +21,13 @@ Tecnologías: NestJs, Typescript, TypeORM, PostgresSQL, Swagger, JWT, etc...
 #### Clona el repositorio.
 
 ```
-git clone git@github.com:rvh2776/basic-backend.git
+git clone git@github.com:rvh2776/basic-back.git
 ```
 
 #### Entra a la carpeta del proyecto.
 
 ```
-cd basic-backend
+cd basic-back
 ```
 
 #### Instala las dependencias.
